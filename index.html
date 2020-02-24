@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NARWHAL APP</title>
+
+    <script src="https://kit.fontawesome.com/39b2b4e1d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="     crossorigin="anonymous"></script>
+    
+    
+</head>
+<body>
+    <!-- Left Panel -->
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-default">
+            <div id="main-menu" class="main-menu navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <img src="whale.png" class="logo">  
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-comments fa-3x"></i></a>
+                    </li>
+                    <li class="active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-building-o fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-line-chart fa-3x"></i></a>                 
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </aside>
+    <!-- End of Left Panel -->
+
+    <!-- Right Panel -->
+    <div id="right-panel" class="right-panel">
+
+        <!-- Top bar-->
+        <header id="header" class="header">
+            <div class="header-menu">
+                <div class="col-sm-7">
+                    <h2 class="header-title-text">NARWHAL</h2>
+                </div>
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" id="userdd" aria-haspopup="true" aria-expanded="true">
+                            <div id="current-user-image"></div>
+                        </a>                    
+                    </div>
+                    <div class="user-area user-greeting" id="current-user-name">
+                    </div>
+                    <div class="user-area dropdown for-notification ">
+                        <button class="btn dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bell"></i>
+                            <span class="count bg-info" id="notification-count"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End of top bar-->
+        <!--Breadcrumbs-->
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Teams</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <button class="search-trigger"><i class="fa fa-search"></i></button>
+                            <div class="form-inline">
+                                <form class="search-form">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="Search Team Name" aria-label="Search">                                    
+                                </form>
+                            </div>
+                            <button type="button" class="btn team text-white rounded-lg">+ CREATE NEW TEAM</button>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Breadcrumbs -->
+        <!-- Content Panel -->
+        <div class="content mt-3">
+            <div class="col-sm-9">
+                <div class="card">                    
+                    <div class="card-body">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">All</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-favorites-tab" data-toggle="pill" href="#pills-favorites" role="tab" aria-controls="pills-favorites" aria-selected="false">Favorites</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-archived-tab" data-toggle="pill" href="#pills-archived" role="tab" aria-controls="pills-archived" aria-selected="false">Archived</a>
+                                </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+                                <div id="taball">
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-favorites" role="tabpanel" aria-labelledby="pills-favorites-tab">
+                                <div id="tabfav">
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-archived" role="tabpanel" aria-labelledby="pills-archived-tab">
+                                <div id="tabarch">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">                
+                    <div class="card-header">
+                        <h6 class="card-title mb-0">Activity
+                        </h6>
+                    </div>
+                    <div class="card-body" id="activity-card">         
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of content panel --> 
+        
+    </div>
+    <!--End of Right Panel -->
+<script src="./index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
